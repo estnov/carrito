@@ -1,0 +1,14 @@
+<p>list-products works!</p>
+<h1>UPS</h1>
+
+<mat-selection-list #productos [multiple]="false">
+    <mat-list-option *ngFor="let product of products " [value]="product">
+      {{product.name}}
+    </mat-list-option>
+  </mat-selection-list>
+  
+  <p>
+    Option selected: {{productos.selectedOptions.selected[0]?.name}
+  </p>
+
+<button (click)="goNewProduct()">Nuevo Producto</button>

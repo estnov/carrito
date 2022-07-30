@@ -1,0 +1,36 @@
+<p>new-product works!</p>
+
+<form class="example-form">
+
+
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Codigo</mat-label>
+                    <input matInput [(ngModel)]="product.code" name="code">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="example-full-width" appearance="fill" >
+                    <mat-label>Nombre</mat-label>
+                    <input matInput [(ngModel)]="product.name" name="name">
+                </mat-form-field>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label >Precio</mat-label>
+            <input matInput placeholder="Ex. 105.42" [(ngModel)]="product.price" name="price">
+        </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+    <br>
+    <br>
+
+    <button mat-raised-button color="accent" (click)="goListProductos()" >Ir al listado</button>
+</form>
+
+
